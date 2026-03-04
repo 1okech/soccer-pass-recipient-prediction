@@ -100,4 +100,4 @@ Both machine learning models significantly outperform the nearest-teammate heuri
 ## Author
 
 **Isaac Okech Were**  
-Stanford University — Computer Science 
+Stanford University — B.S. Computer Science 
