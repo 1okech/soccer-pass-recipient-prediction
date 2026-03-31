@@ -78,9 +78,9 @@ These metrics better capture decision quality than raw accuracy alone.
 
 | Model                       | Top-1 Accuracy | Top-3 Accuracy | Avg Rank |
 | --------------------------- | -------------- | -------------- | -------- |
-| Nearest Teammate (Baseline) | 31.2%          | 55.8%          | 2.94     |
-| Logistic Regression         | 47.6%          | 78.9%          | 1.88     |
-| Neural Network              | 52.3%          | 83.7%          | 1.62     |
+| Nearest Teammate (Baseline) | 10.0%          | 30.0%          | 5.50     |
+| Logistic Regression         | 39.1%          | 77.7%          | 1.88     |
+| Sigmoid Neural Network              | 44.6%          | 80.5%          | 1.62     |
 
 **Key takeaway:**  
 Both machine learning models significantly outperform the nearest-teammate heuristic, demonstrating that passing decisions depend on richer spatial context beyond simple proximity.
