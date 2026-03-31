@@ -84,14 +84,20 @@ These metrics better capture decision quality than raw accuracy alone.
 | Softmax Neural Network    | 25.7%   | 55.9%  | 2.01  |
 
 **Key takeaway:**  
-Both machine learning models significantly outperform the nearest-teammate heuristic, demonstrating that passing decisions depend on richer spatial context beyond simple proximity.
+- The Sigmoid NN performs best, outperforming logistic regression and showing non-linear models better capture spatial interactions.
+- The Softmax model overfits: Despite a negligible training loss (<0.02), test accuracy drops (26.5% Top-1), signifying overfitting rather than generalization.
+- Due to scarcity in datasets, we performed data augmentation by implementing  y-axis pitch reflection. This improved performance for neural networks.
+- X-axis and x & y-axis reflections quadrupled the original training set.
+- Logistic regression shows minimal improvement with more data (model capacity), while neural networks benefit from additional training data.
+
 
 ---
 
 ## Future Work
 
-- Incorporate temporal sequence models
-- Add defender pressure features
+- Find more datasets to make the models learn highly generalized passing behaviors.
+- Incorporate outcome-weighted objectives by assigning higher importance to high-value passes (e.g., assists or passes that initiate/advance attacks) so the model prioritizes impactful decisions over routine passes.
+- Tune decision-aware hyperparameters so that future models could evaluate risk-versus-reward tradeoffs of a pass (e.g., shot creation vs interception risk).
 - Explore graph neural networks
 - Build real-time inference pipeline
 - Deploy interactive tactical dashboard
