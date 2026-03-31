@@ -34,11 +34,14 @@ Each pass event is represented using player and ball positions at the time of pa
 
 To capture tactical context, the following spatial features were engineered:
 
+- Each candidate recevier is modeled as a 9-dimensional feature vector.
 - Inter-player distances
 - Passer → teammate distances
 - Relative angles between players
 - Spatial ordering of teammates
 - Local positional context
+- Passing lane congestion
+- Defensive pressure
 
 These features transform raw tracking data into structured inputs suitable for machine learning models.
 
@@ -55,8 +58,8 @@ These features transform raw tracking data into structured inputs suitable for m
 
 ### Machine Learning Models
 
-- Logistic Regression with softmax output
-- Neural Network classifier
+- Logistic Regression 
+- Neural Network classifiers with sigmoid & softmax outputs
 
 The models output a probability distribution over all eligible teammates.
 
@@ -83,7 +86,7 @@ These metrics better capture decision quality than raw accuracy alone.
 | Sigmoid Neural Network              | 44.6%          | 80.5%          | 1.62     |
 | Softmax Neural Network    | 25.7%   | 55.9%  | 2.01  |
 
-**Key takeaway:**  
+**Key takeaways:**  
 - The Sigmoid NN performs best, outperforming logistic regression and showing non-linear models better capture spatial interactions.
 - The Softmax model overfits: Despite a negligible training loss (<0.02), test accuracy drops (26.5% Top-1), signifying overfitting rather than generalization.
 - Due to scarcity in datasets, we performed data augmentation by implementing  y-axis pitch reflection. This improved performance for neural networks.
