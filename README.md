@@ -81,6 +81,7 @@ These metrics better capture decision quality than raw accuracy alone.
 | Nearest Teammate (Baseline) | 10.0%          | 30.0%          | 5.50     |
 | Logistic Regression         | 39.1%          | 77.7%          | 1.88     |
 | Sigmoid Neural Network              | 44.6%          | 80.5%          | 1.62     |
+| Softmax Neural Network    | 25.7%   | 55.9%  | 2.01  |
 
 **Key takeaway:**  
 Both machine learning models significantly outperform the nearest-teammate heuristic, demonstrating that passing decisions depend on richer spatial context beyond simple proximity.
