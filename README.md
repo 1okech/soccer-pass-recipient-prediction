@@ -86,6 +86,8 @@ These metrics better capture decision quality than raw accuracy alone.
 | Sigmoid Neural Network              | 44.6%          | 80.5%          | 1.62     |
 | Softmax Neural Network    | 25.7%   | 55.9%  | 2.01  |
 
+![Pass Prediction Heatmap](images/model_comparison.png)
+
 **Key takeaways:**  
 - The Sigmoid NN performs best, outperforming logistic regression and showing non-linear models better capture spatial interactions.
 - The Softmax model overfits: Despite a negligible training loss (<0.02), test accuracy drops (26.5% Top-1), signifying overfitting rather than generalization.
